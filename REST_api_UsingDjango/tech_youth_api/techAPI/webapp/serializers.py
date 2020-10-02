@@ -58,14 +58,3 @@ class userSerializer(serializers.ModelSerializer):
         instance.password = validated_data.get('password')
         instance.save()
         return instance
-
-#
-# class allSerializer(serializers.ModelSerializer):
-#     # us = userSerializer(many=True)
-#     # inter = interestSerializer(many=True)
-#     # ques = questionsSerializer(many=True)
-#
-#     class Meta:
-#         model=user,interest
-#         fields =[{user:['username','password','emailid'],
-#                     interest:['__all__']}]
